@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+}
+
+.header__inner {
+  /* ヘッダー内のコンテンツ幅を制限＆中央寄せ */
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  color: #e50089;
+  font-family: 'VT323', monospace;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.site-nav a {
+  font-size: 1.1rem;
+  color: #e50089;
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.site-nav a:hover {
+  color: #ff6ec7;
+  text-shadow: 0 0 8px #ff6ec7;
+}
+

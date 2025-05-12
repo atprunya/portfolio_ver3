@@ -1,0 +1,42 @@
+/* src/components/TVNoiseIntro.css */
+
+.tv-intro {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ノイズ GIF を背景に */
+.tv-intro.noise {
+  background: url('/noise.gif') center/cover repeat;
+}
+
+/* テキストを中央に表示 */
+.tv-intro.text {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.tv-intro__texts p {
+  color: white;
+  font-family: monospace;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+/* テキストをフェードイン／アウト */
+@keyframes fadeInOut {
+  0%,100% { opacity: 0; }
+  50%     { opacity: 1; }
+}
+/* src/index.css などグローバルなスタイルシートに追加 */
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
