@@ -189,4 +189,40 @@ section {
 @keyframes fadeOut {
   to { opacity: 0; }
 }
+/* 略 — 既存スタイルはそのままです */
+
+/* —— 複数バブル用2カラムレイアウト —— */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .section-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* —— ヘッダーをスマホでも対応させる —— */
+.header__inner {
+  flex-wrap: wrap;
+  height: auto;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+.site-nav {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.site-nav a {
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+}
+
+/* 他スタイルは既存のまま */
 
